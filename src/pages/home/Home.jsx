@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "../../components/header/Header";
 
 const Home = () => {
   const APP_ID = "4e9f05eb";
@@ -21,7 +22,11 @@ const Home = () => {
     getData();
   }, []);
 
-  return <div>Home</div>;
+  return (
+   <div>
+    <Header setQuery={setQuery} />
+   </div>
+  )
 };
 
 export default Home;
