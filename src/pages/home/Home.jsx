@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "../../components/header/Header";
 import Cards from "../../components/cards/Cards";
-import { ImgDiv, HomeImg } from "./Home.style";
+import { ImgDiv, HomeImg, HeaderText } from "./Home.style";
 import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
@@ -42,12 +42,16 @@ const Home = () => {
         getData={getData}
       />
 
-      {!recipes && (
+      {!recipes && 
         <ImgDiv>
           <HomeImg src={homeSvg} />
         </ImgDiv>
-      )}
-      <Cards />
+      }
+
+        {recipes?.length===0 && <HeaderText>The Food can not be found</HeaderText>}
+
+        {recipes?.length>0 && <Cards recipes={recipes} /> }
+
     </div>
   );
 };
