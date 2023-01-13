@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "../../components/header/Header";
 import Cards from "../../components/cards/Cards";
-import { ImgDiv,HomeImg } from "./Home.style";
-import homeSvg from "../../assets/home.svg"
+import { ImgDiv, HomeImg } from "./Home.style";
+import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
   const APP_ID = "4e9f05eb";
@@ -42,12 +42,11 @@ const Home = () => {
         getData={getData}
       />
 
-      {!recipes&&
-      <ImgDiv>
-      <HomeImg src={homeSvg} />
-      </ImgDiv>
-      
-      }
+      {!recipes && (
+        <ImgDiv>
+          <HomeImg src={homeSvg} />
+        </ImgDiv>
+      )}
       <Cards />
     </div>
   );
