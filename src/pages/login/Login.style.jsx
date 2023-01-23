@@ -1,15 +1,17 @@
-import styled from "styled-components";
-import Flex from "../../components/globalStyles/Flex.style";
+import styled from 'styled-components';
+import Flex from '../../components/globalStyles/Flex.style';
 
-export const LoginContainer = styled(Flex)`
+
+ export const LoginContainer= styled(Flex)`
   height: 100vh;
-  background-image: url("https://picsum.photos/1600/900");
+  background-image: url('https://picsum.photos/1600/900');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
 `;
 
-export const FormContainer = styled(Flex)`
+export const FormContainer= styled(Flex)`
   width: 40rem;
   height: 40rem;
   max-width: 50rem;
@@ -31,6 +33,7 @@ export const StyledInput = styled.input`
   width: 15rem;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.6);
+  border: none;
   color: white;
   margin: 1rem;
   text-indent: 1rem;
@@ -42,10 +45,12 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledButton = styled.button`
+
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   color: white;
+  border: none;
   margin: 1rem;
   cursor: pointer;
   &:hover {

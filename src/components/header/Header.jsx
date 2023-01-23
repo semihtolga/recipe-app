@@ -9,17 +9,18 @@ import {
   Select,
 } from "./Header.style";
 
-const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
+const Header = ({ setQuery, setSelectedMeal, mealType,getData }) => {
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    getData();
+    getData()
   }
-  
+
   return (
     <HeaderContainer>
       <MainHeader>Recipe App</MainHeader>
 
-      <FormContainer onSubmit={handleSubmit} >
+      <FormContainer onSubmit={handleSubmit}>
         <FoodInput
           type="text"
           placeholder="Search"
@@ -34,9 +35,11 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
           onChange={(e) => setSelectedMeal(e.target.value)}
         >
           {mealType.map((meal, index) => {
-            <option key={index} value={meal}>
-              {meal}{" "}
-            </option>;
+            return (
+              <option key={index} value={meal}>
+                {meal}
+              </option>
+            );
           })}
         </Select>
       </FormContainer>

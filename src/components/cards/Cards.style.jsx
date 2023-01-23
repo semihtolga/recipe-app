@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 import Flex from '../../components/globalStyles/Flex.style';
 
 export const MainContainer = styled(Flex)`
